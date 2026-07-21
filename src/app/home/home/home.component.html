@@ -1,1 +1,13 @@
-<a routerLink="/admin"> Admin </a>
+<a [routerLink]="['/admin']" [queryParams]="{ id: 101, name: 'Sunil' }"
+  >Admin 101</a
+>
+<br />
+<br />
+<a [routerLink]="['/admin']" [queryParams]="{ id: 102, name: 'Rahul' }"
+  >Admin 102</a
+>
+<br />
+<br />
+<a [routerLink]="['/admin']" [queryParams]="{ id: 103, name: 'Admin' }"
+  >Admin 103</a
+>

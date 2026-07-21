@@ -7,11 +7,15 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./dashboard.component.css"],
 })
 export class DashboardComponent implements OnInit {
-  id: any;
+  userId: string;
+  userName: string;
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get("id");
-    console.log(this.id);
+    this.route.queryParams.subscribe((params) => {
+      this.userId = params["id"];
+      this.userName = params["name"];
+    });
   }
 }
